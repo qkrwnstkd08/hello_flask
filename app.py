@@ -6,8 +6,13 @@ app = Flask(__name__)
 
 # '/' 주소로 접속하면 실행되는 함수
 @app.route('/')
-def home():
-    return "Hello, world!"
+def my_profile():
+    return {
+        "name": "박준상"
+        "role": "초보 서버 개발자"
+        "status": "로컬 환경 통제 완료!"
+        "skills": ["Ubuntu", "VS Code", "Python" "Flask"] 
+    }
 
 # 이 파일을 직접 실행했을 때만 서버 실행
 if __name__ == '__main__':
