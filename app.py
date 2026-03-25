@@ -7,6 +7,7 @@ app = Flask(__name__)
 # '/' 주소로 접속하면 실행되는 함수
 @app.route('/')
 def my_profile():
+    #파이썬 딕셔너리를 반환하면 Flask가 알아서 웹 표준인 JSON으로 변환해줍니다!
     return {
         "name": "박준상"
         "role": "초보 서버 개발자"
