@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    # 이제는JSON 이 아니라 HTML 파일을 보냅니다
-    return render_template('index.html')
+    foods = ["치킨", "피자", "햄버거", "김밥", "떡볶이", "리면", "초밥"]
+    return render_template('index.html', data=foods)
 
 if __name__ == '__main__':
     app.run(debug=True)
